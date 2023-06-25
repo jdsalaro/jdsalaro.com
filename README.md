@@ -3,9 +3,11 @@
 
 ## About
 
-This is the GitLab project I use to manage my website at https://jdsalaro.com/.
+This is the GitLab and GitHub (mirror) project I use to manage my website at https://jdsalaro.com/.
 
-Some things are visible only to me and others public, you're probably here because you clicked the "Suggest Edit ✏️".
+Some things are visible only to me while others like public assets are visible to anyone.
+
+You're probably here because you clicked the `Suggest Edit ✏️` on an article, see below to provide feedback.
 
 ### GitLab
 
