@@ -7,7 +7,7 @@ This is the GitLab and GitHub (mirror) project I use to manage my website at htt
 
 Some things are visible only to me while others like public assets are visible to anyone.
 
-You're probably here because you clicked the "Suggest edit ✏️" on an article, see below to provide feedback.
+You're probably here because you clicked the [Suggest edit ✏️] on an article, see below to provide feedback.
 
 ### 🦊 GitLab 
 
