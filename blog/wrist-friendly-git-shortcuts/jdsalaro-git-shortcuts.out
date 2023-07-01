@@ -6,6 +6,7 @@ ___________________________________________________________________
 #                                                                 #   
 #_________________________________________________________________#
 
+
 ## Basic
 
 alias   g='git'
@@ -24,7 +25,7 @@ alias  gbd='git branch -d'         # delete a branch
 alias  gcb='git checkout -b'
 alias  gcm='git checkout main'
 alias   gc='git commit -m'
-alias  gce='git commit --allow-empty-message'
+alias  gce='git commit --allow-empty-message -m "" '
 alias   gm='git merge'
 alias  gfa='git fetch --all --prune' # fetch all remote branches and remove local, non-existent ones
 alias   gl='git pull'
