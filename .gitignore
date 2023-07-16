@@ -1,0 +1,16 @@
+.git
+pelican.pid
+srv.pid
+
+tmp
+*.pyc
+*.pickle
+*.lock
+*.ipynb_checkpoints
+.tox/
+*.swo
+_build
+*.swp
+skip
+*.bib.sav
+
