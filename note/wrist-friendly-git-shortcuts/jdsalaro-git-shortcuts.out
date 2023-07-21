@@ -53,13 +53,17 @@ alias gapa='git add --patch'      # interactively select changes to be added
  
 
 # add tracked files, generate a commit message, commit with said message and push
-alias gf="git add -u; git -c color.status=false status \
-| sed -n -r -e '1,/Changes to be committed:/ d' \
-            -e '1,1 d' \
-            -e '/^Untracked files:/,$ d' \
-            -e 's/^\s*//' \
-            -e '/./p' \
-| git commit -F -; git push"
+alias gf='status=`git -c color.status=false status`;\
+          message=`echo "$status"|\
+          sed -n -r\
+          -e "1,/Changes to be committed:/ d"\
+          -e "1,1 d" -e "/^Untracked files:/,$ d"\
+          -e "s/^\s*//"\
+          -e "/^.*git restore/ d"\
+          -e "/./p"`;\
+          echo $message;\
+          git commit -m "message";
+          git push'
 
 # Cleaning
 
