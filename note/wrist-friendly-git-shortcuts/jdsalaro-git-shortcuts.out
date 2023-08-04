@@ -63,6 +63,7 @@ alias gf='status=`git -c color.status=false status`;\
           -e "/./p"`;\
           echo $message;\
           git commit -m "message";
+          sleep 0.1;
           git push'
 
 # Cleaning
