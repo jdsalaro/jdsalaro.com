@@ -18,7 +18,7 @@ alias  gsr='git show'              # show revision
 alias   gd='git diff'
 alias  gds='git diff --staged'     # diff against the staged changes in the index
 alias  gdw='git diff --word-diff'
-alias   ga='git add -u'
+alias   ga='git add'
 alias   gb='git branch'
 alias  gba='git branch -a'         # show all branches
 alias  gbd='git branch -d'         # delete a branch
@@ -46,6 +46,7 @@ alias gcs='git commit -S'         # GPG sign commit
 
 ## shortcuts for "git add"
 
+alias   gat='git add -u'	  # add files which are tracked already
 alias  gaa='git add --all'        # add all files, modified and untracked
 alias gapa='git add --patch'      # interactively select changes to be added
 
