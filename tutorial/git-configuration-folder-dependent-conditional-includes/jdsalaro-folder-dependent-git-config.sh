@@ -13,7 +13,7 @@ read -d "" gitconfig <<END
 #                                                                                         #
 #                                                                                         #
 # jdsalaro's git-configuration-folder-dependent-conditional-includes                      #
-# from http://jdsalaro.com/howto/git-configuration-folder-dependent-conditional-includes  #
+# from http://jdsalaro.com/tutorial/git-configuration-folder-dependent-conditional-includes  #
 #                                                                                         #
 #_________________________________________________________________________________________#
 
