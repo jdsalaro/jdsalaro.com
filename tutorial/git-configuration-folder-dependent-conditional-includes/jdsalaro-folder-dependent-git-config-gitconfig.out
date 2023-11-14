@@ -1,0 +1,25 @@
+#_____________________________________________________________________________________________
+#                                                                                            #
+#                                                                                            #
+# jdsalaro's global configuration for folder-dependent git configuration                     #
+# from http://jdsalaro.com/tutorial/git-configuration-folder-dependent-conditional-includes  #
+#                                                                                            #
+#____________________________________________________________________________________________#
+
+[user]
+    name = global
+    email = global.noreply@jdsalaro.com
+
+[includeIf "gitdir:/tmp/jdsalaro/gitlab/**"]
+    path = /tmp/jdsalaro/gitlab/gitconfig
+
+[includeIf "gitdir:/tmp/jdsalaro/gitlab-university/"]
+    path = /tmp/jdsalaro/gitlab-university/gitconfig
+#   path = ~/.gitconfig.gitlab-university
+#   path = /tmp/jdsalaro/gitlab-university/gitconfig
+#   path = /tmp/jdsalaro/gitlab-university/.gitconfig
+
+[includeIf "gitdir:/tmp/jdsalaro/github/"]
+    path = /tmp/jdsalaro/github/gitconfig
+
+
