@@ -9,13 +9,13 @@ do
 
 read -d "" gitconfig <<END
 
-#__________________________________________________________________________________________
-#                                                                                         #
-#                                                                                         #
-# jdsalaro's git-configuration-folder-dependent-conditional-includes                      #
+#_____________________________________________________________________________________________
+#                                                                                            #
+#                                                                                            #
+# jdsalaro's git-configuration-folder-dependent-conditional-includes                         #
 # from http://jdsalaro.com/tutorial/git-configuration-folder-dependent-conditional-includes  #
-#                                                                                         #
-#_________________________________________________________________________________________#
+#                                                                                            # 
+#____________________________________________________________________________________________#
 
 [user]
 	name = $tldir

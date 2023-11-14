@@ -1,10 +1,10 @@
-#__________________________________________________________________________________________
-#                                                                                         #
-#                                                                                         #
-# jdsalaro's global configuration for folder-dependent git configuration                  #
+#_____________________________________________________________________________________________
+#                                                                                            #
+#                                                                                            #
+# jdsalaro's global configuration for folder-dependent git configuration                     #
 # from http://jdsalaro.com/tutorial/git-configuration-folder-dependent-conditional-includes  #
-#                                                                                         #
-#_________________________________________________________________________________________#
+#                                                                                            #
+#____________________________________________________________________________________________#
 
 [user]
     name = global
