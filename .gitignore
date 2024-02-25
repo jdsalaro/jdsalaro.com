@@ -13,4 +13,5 @@ _build
 *.swp
 skip
 *.bib.sav
+*.DS_Store
 
