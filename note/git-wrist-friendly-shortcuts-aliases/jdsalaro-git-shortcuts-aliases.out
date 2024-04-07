@@ -9,29 +9,29 @@ ___________________________________________________________________________
 
 ## Basic
 
-alias   g='git'
-alias   gg='git clone'
+alias  g='git'
+alias  gg='git clone'
 alias  ggg='git clone --recursive' # clone repository and submodules
-alias   gs='git status -s'         # short status 
+alias  gs='git status -s'         # short status 
 alias  gss='git status'
 alias  gsr='git show'              # show revision 
-alias   gd='git diff'
+alias  gd='git diff'
 alias  gds='git diff --staged'     # diff against the staged changes in the index
 alias  gdw='git diff --word-diff'
-alias   ga='git add'
-alias   gb='git branch'
+alias  ga='git add'
+alias  gb='git branch'
 alias  gba='git branch -a'         # show all branches
 alias  gbd='git branch -d'         # delete a branch
 alias  gcb='git checkout -b'       # create a new branch
 alias  gco='git checkout'          # git checkout 
 alias  gcm='git checkout main'     # checkout the main branch
 alias  gch='git checkout HEAD --'  # checkout following files from the HEAD in the current branch
-alias   gc='git commit -m'         # commit with message following 
+alias  gc='git commit -m'         # commit with message following 
 alias  gce='git commit --allow-empty-message -m "" ' # commit with empty message
-alias   gm='git merge'
+alias  gm='git merge'
 alias  gfa='git fetch --all --prune' # fetch all remote branches and remove local, non-existent ones
-alias   gl='git pull'
-alias   gp='git push'
+alias  gl='git pull'
+alias  gp='git push'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
 alias grbs='git rebase --skip'
@@ -46,8 +46,8 @@ alias gcs='git commit -S'         # GPG sign commit
 
 ## shortcuts for "git add"
 
-alias   gat='git add -u'	  # add files which are tracked already
-alias  gaa='git add --all'        # add all files, modified and untracked
+alias gat='git add -u'	  # add files which are tracked already
+alias gaa='git add --all'        # add all files, modified and untracked
 alias gapa='git add --patch'      # interactively select changes to be added
 
 ## shortcuts for "git add++"
@@ -76,37 +76,41 @@ alias gpristine='git reset --hard && git clean -d -f -x' # leave the HEAD, index
 
 ## shortcuts for "git remote"
 
-alias   grs='git remote -v'
-alias  grmv='git remote rename'
-alias  grrm='git remote remove'
+alias grs='git remote -v'
+alias grmv='git remote rename'
+alias grrm='git remote remove'
 alias grset='git remote set-url'
 
 ## Git Graphical User Interfaces
 
 alias gkb='gitk --all&'
-alias  gk='gitx --all'
+alias gk='gitx --all'
 alias gmt='git mergetool --no-prompt'
 
 ## shortcuts for "git stash"
 
-alias  gsta='git stash save'
+alias gsta='git stash save'
 alias gstaa='git stash apply'
-alias  gstl='git stash list'
-alias  gsts='git stash show --text'
-alias  gstd='git stash drop'
-alias  gstp='git stash pop'
+alias gstl='git stash list'
+alias gsts='git stash show --text'
+alias gstd='git stash drop'
+alias gstp='git stash pop'
 
 ## shortcuts for "git log"
 
 alias glogt='git log --graph --max-count = 10'
 alias gloga='git log --graph --decorate --all'
-alias   glo='git log --oneline --decorate --color'
-alias  glog='git log --oneline --decorate --color --graph'
-alias   gls='git shortlog -sn' 
-alias  glst='git shortlog -sn' 
+alias glo='git log --oneline --decorate --color'
+alias glog='git log --oneline --decorate --color --graph'
+alias gls='git shortlog -sn' 
+alias glst='git shortlog -sn' 
 
 ## shortcuts for "git cherry-pick"
 
-alias  gcp='git cherry-pick'
+alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
+
+## Navigation
+
+alias gro='cd $(git rev-parse --show-toplevel)' # navigate to a git repository's top-level directory
