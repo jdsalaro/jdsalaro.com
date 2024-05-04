@@ -2,11 +2,7 @@ ___________________________________________________________________________
    
 #  by @jdsalaro
 
-
-  code from:
-
-
-  https://jdsalaro.com/language/library/example
+  Code from: https://jdsalaro.com/language/library/example
 _________________________________________________________________________
 
 
