@@ -1,9 +1,12 @@
-___________________________________________________________________________
-   
-#  by @jdsalaro
 
-  Code from: https://jdsalaro.com/snippet/golang/kata/codewars/opposites-attract
-_________________________________________________________________________ 
+---
+
+# by @jdsalaro
+
+  from https://jdsalaro.com/snippet/golang/kata/codewars/opposites-attract
+
+---
+
 
 
 
