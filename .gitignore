@@ -15,6 +15,7 @@ _build
 *.draft.*
 *.exclude
 *.exclude.*
+__debug*
 skip
 *.bib.sav
 *.DS_Store
