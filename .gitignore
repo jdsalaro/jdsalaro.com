@@ -11,6 +11,10 @@ tmp
 *.swo
 _build
 *.swp
+*.draft
+*.draft.*
+*.exclude
+*.exclude.*
 skip
 *.bib.sav
 *.DS_Store
