@@ -1,8 +1,10 @@
+
+
 #_____________________________________________________________________________________________
 #                                                                                            #
 #                                                                                            #
 # jdsalaro's global configuration for folder-dependent git configuration                     #
-# from http://jdsalaro.com/tutorial/git-configuration-folder-dependent-conditional-includes  #
+# from https://jdsalaro.com/tutorial/git-configuration-folder-dependent-conditional-includes  #
 #                                                                                            #
 #____________________________________________________________________________________________#
 
@@ -21,5 +23,7 @@
 
 [includeIf "gitdir:/tmp/jdsalaro/github/"]
     path = /tmp/jdsalaro/github/gitconfig
+
+
 
 
