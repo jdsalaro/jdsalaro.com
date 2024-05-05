@@ -63,6 +63,7 @@ func server(port int) error {
 
 func client(port int) error {
 	log.Println("Sending request ...")
+	//todo: replace hardcoded numbers with rand
 	url := fmt.Sprintf("http://localhost:%d?timmy=1&sarah=2", port)
 	var client http.Client
 	resp, err := client.Get(url)
