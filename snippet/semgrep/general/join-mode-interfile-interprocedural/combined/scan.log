@@ -1,0 +1,24 @@
+                   
+                   
+┌─────────────────┐
+│ 7 Code Findings │
+└─────────────────┘
+                              
+  [36m[22m[24m  src/main.py[0m
+   ❯❯❱ match
+          match
+               
+           20┆ return SINK.sink(tainted)
+            ⋮┆----------------------------------------
+           31┆ return SINK.sink(tainted)
+            ⋮┆----------------------------------------
+           46┆ return SINK.sink(interprocedural_source_helper(source))
+            ⋮┆----------------------------------------
+           60┆ return SINK.sink(interprocedural_no_source_helper())
+            ⋮┆----------------------------------------
+           70┆ return SINK.sink(SOURCE.interfile_source(source))
+            ⋮┆----------------------------------------
+           70┆ return SINK.sink(SOURCE.interfile_source(source))
+            ⋮┆----------------------------------------
+           75┆ return SINK.sink(SOURCE.interfile_source())
+

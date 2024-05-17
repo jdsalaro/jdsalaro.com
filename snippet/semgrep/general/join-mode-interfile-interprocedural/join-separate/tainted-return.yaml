@@ -1,0 +1,16 @@
+rules:
+- id: first
+  message: first
+  severity: ERROR
+  languages:
+  - python
+  mode: taint
+  pattern-sources:
+    - patterns:
+      - pattern:  $SOURCE = $REQUEST.data[$KEY]
+      - pattern-inside: |
+          def $FUNCTION(...):
+            ...
+            return ...
+  pattern-sinks:
+    - pattern: return $SINK

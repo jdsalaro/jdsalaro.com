@@ -1,0 +1,13 @@
+rules:
+- id: match
+  mode: join
+  message: match
+  severity: ERROR
+  join:
+    refs:
+      - rule: tainted-return.yaml
+        as: first
+      - rule: use-of-tainted-return.yaml
+        as: second
+    on:
+      - 'first.$FUNCTION < second.$FUNCTION'
