@@ -21,15 +21,15 @@ frame  utils.RAW SOURCE SINK interfile_source sink = utils.py
 
 main.RAW --> __main__ [penwidth=1 color=red]
 main.RAW --> interprocedural_no_source_helper [penwidth=1 color=red]
+
 __main__ --> simple_one_param [penwidth=1 color=red] 
 __main__ --> simple_multi_param [penwidth=1 color=red] 
 __main__ --> interprocedural_source [penwidth=1 color=red]
+__main__ --> interprocedural_no_source 
+__main__ --> interprocedural_interfile [penwidth=1 color=red] 
 
 interprocedural_source --> interprocedural_source_helper [penwidth=1 color=red] call
 interprocedural_source <-- interprocedural_source_helper [penwidth=1 color=red] ret
-
-__main__ --> interprocedural_no_source 
-__main__ --> interprocedural_interfile [penwidth=1 color=red] 
 
 interprocedural_no_source --> interprocedural_no_source_helper call
 interprocedural_no_source <-- interprocedural_no_source_helper [penwidth=1 color=red] ret
