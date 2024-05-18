@@ -32,7 +32,7 @@ simple_one_param --> SINK [penwidth=1 color=red]
 simple_multi_param --> SINK [penwidth=1 color=red]
 
 interprocedural_source --> interprocedural_source_helper [penwidth=1 color=red] call
-interprocedural_source <-- interprocedural_source_helper [penwidth=1 color=red] ret
+interprocedural_source_helperinterprocedural_source <--  [penwidth=1 color=red] ret
 interprocedural_source --> SINK [penwidth=1 color=red]
 
 interprocedural_no_source --> interprocedural_no_source_helper call
