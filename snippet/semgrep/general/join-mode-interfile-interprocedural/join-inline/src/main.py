@@ -83,4 +83,4 @@ if __name__ == "__main__":
     interprocedural_source()
     interprocedural_no_source()
     interprocedural_interfile(RAW)
-    interprocedural_interfile_no_source()
+    interprocedural_interfile_no_source(RAW)
