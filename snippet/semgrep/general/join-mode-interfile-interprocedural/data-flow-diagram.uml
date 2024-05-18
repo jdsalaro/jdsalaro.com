@@ -30,10 +30,11 @@ __main__ --> interprocedural_interfile [penwidth=1 color=red]
 
 interprocedural_source --> interprocedural_source_helper [penwidth=1 color=red] call
 interprocedural_source <-- interprocedural_source_helper [penwidth=1 color=red] ret
-interprocedural_source --> interprocedural_source_helper [penwidth=1 color=red] call
+interprocedural_source --> SINK [penwidth=1 color=red] call
 
 interprocedural_no_source --> interprocedural_no_source_helper call
 interprocedural_no_source <-- interprocedural_no_source_helper [penwidth=1 color=red] ret
+interprocedural_no_source --> interprocedural_no_source_helper call
 
 
 simple_one_param --> SINK [penwidth=1 color=red]
