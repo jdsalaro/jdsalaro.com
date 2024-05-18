@@ -36,7 +36,7 @@ interprocedural_source <-- interprocedural_source_helper [penwidth=1 color=red] 
 interprocedural_source --> SINK [penwidth=1 color=red]
 
 interprocedural_no_source --> interprocedural_no_source_helper call
-interprocedural_no_source <-- interprocedural_no_source_helper [penwidth=1 color=red] ret
+interprocedural_no_source_helper --> interprocedural_no_source <--  [penwidth=1 color=red] ret
 interprocedural_no_source --> SINK [penwidth=1 color=red]
 
 utils.RAW --> interfile_source [penwidth=1 color=red]
