@@ -1,0 +1,42 @@
+
+store	main.RAW
+
+process	__main__
+process	simple_one_param
+process	simple_multi_param
+process interprocedural_source
+process interprocedural_source_helper
+process interprocedural_no_source
+process interprocedural_no_source_helper
+process interprocedural_interfile 
+
+channel	SOURCE
+channel	SINK
+store	utils.RAW
+process	interfile_source
+process	sink
+
+frame main.RAW __main__ simple_one_param simple_multi_param interprocedural_source interprocedural_source_helper interprocedural_no_source interprocedural_no_source_helper interprocedural_interfile = main.py
+frame  utils.RAW SOURCE SINK interfile_source sink = utils.py
+
+main.RAW --> __main__ [penwidth=1 color=red]
+main.RAW --> interprocedural_no_source_helper [penwidth=1 color=red]
+__main__ --> simple_one_param [penwidth=1 color=red] 
+__main__ --> simple_multi_param [penwidth=1 color=red] 
+__main__ --> interprocedural_source [penwidth=1 color=red]
+interprocedural_source --> interprocedural_source_helper [penwidth=1 color=red] call
+interprocedural_source <-- interprocedural_source_helper [penwidth=1 color=red] ret
+__main__ --> interprocedural_no_source 
+interprocedural_no_source --> interprocedural_no_source_helper call
+interprocedural_no_source <-- interprocedural_no_source_helper [penwidth=1 color=red] ret
+__main__ --> interprocedural_interfile [penwidth=1 color=red] 
+
+simple_one_param --> SINK [penwidth=1 color=red]
+simple_multi_param --> SINK [penwidth=1 color=red]
+
+SINK --> sink [penwidth=1 color=red]
+interprocedural_interfile --> SINK [penwidth=1 color=red]
+
+interprocedural_interfile <-- SOURCE [penwidth=1 color=red]
+SOURCE <-- interfile_source [penwidth=1 color=red]
+utils.RAW --> interfile_source [penwidth=1 color=red]
