@@ -40,8 +40,8 @@ interprocedural_no_source <-- interprocedural_no_source_helper [penwidth=1 color
 interprocedural_no_source --> SINK [penwidth=1 color=red]
 
 utils.RAW --> interfile_source [penwidth=1 color=red]
-interfile_source -- SOURCE [penwidth=1 color=red]
+interfile_source --> SOURCE [penwidth=1 color=red]
 interprocedural_interfile --> SINK [penwidth=1 color=red]
-interprocedural_interfile <-- SOURCE [penwidth=1 color=red]
+interprocedural_interfile <-- [penwidth=1 color=red]
 
 SINK --> sink [penwidth=1 color=red]
