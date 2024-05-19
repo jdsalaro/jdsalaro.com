@@ -1,0 +1,41 @@
+rules:
+  - id: match
+    languages: [python]
+    message: match
+    severity: ERROR
+    mode: taint
+    pattern-sources:
+      - patterns:
+          - pattern: $PARAM
+          - pattern-inside: |
+              def $FUNCTION(...,$PARAM,...):
+                ...
+                return ...    
+    pattern-sinks:
+      - patterns:
+          - pattern: $TAINTED
+          - pattern-inside: utils.SINK.sink($TAINTED, ... )
+  
+  - id: match
+    message: match
+    severity: ERROR
+    mode: join
+    join:
+      rules:
+        - id: first
+          languages: [python]
+          mode: taint
+          pattern-sources:
+            - patterns:
+              - pattern:  $SOURCE = $REQUEST.data[$KEY]
+              - pattern-inside: |
+                  def $FUNCTION(...):
+                    ...
+                    return ...
+          pattern-sinks:
+            - pattern: return $SINK
+        - id: second
+          languages: [python]
+          pattern: utils.SINK.sink($FUNCTION(...), ...) 
+      on:
+        - 'first.$FUNCTION < second.$FUNCTION'

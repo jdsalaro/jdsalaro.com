@@ -5,9 +5,9 @@ rules:
   severity: ERROR
   join:
     refs:
-      - rule: tainted-return.yaml
+      - rule: tainted-return.yml
         as: first
-      - rule: use-of-tainted-return.yaml
+      - rule: use-of-tainted-return.yml
         as: second
     on:
       - 'first.$FUNCTION < second.$FUNCTION'

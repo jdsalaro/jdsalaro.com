@@ -1,0 +1,7 @@
+rules:
+- id: second
+  message: second
+  severity: ERROR
+  languages:
+  - python
+  pattern: utils.SINK.sink($FUNCTION(...), ...) 
