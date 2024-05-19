@@ -2,6 +2,15 @@
 !*.*
 !*/
 
+
+!Gemfile
+!Gemfile.lock
+
+!Pipfile
+!Pipfile.lock
+
+!Dockerfile
+
 .git
 pelican.pid
 srv.pid
