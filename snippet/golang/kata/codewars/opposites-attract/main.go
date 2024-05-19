@@ -9,12 +9,12 @@ import (
 /*
  *
  * code sample and playground
- * for friends guayahack.co
+ * for friends at guayahack.co
  *
  * by @jdsalaro
  */
 
-//todo: use env variables
+//todo: add a couple of tests for client.go and server.go
 
 func main() {
 	var s server.Server

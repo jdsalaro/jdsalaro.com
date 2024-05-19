@@ -21,14 +21,15 @@ type Server struct {
 type ServerOption func(c *ServerConfig)
 
 const (
-	EXPECTED_PARAMS = 2
+	PARAMS_EXPECTED = 2
+	PORT_LISTEN = 2
 )
 
 func DefaultHandler(w http.ResponseWriter, r *http.Request) {
 	params := r.URL.Query()
 	inLove := false
 
-	if len(params) == EXPECTED_PARAMS {
+	if len(params) == PARAMS_EXPECTED {
 
 		pn := []int{}
 
@@ -53,7 +54,7 @@ func DefaultHandler(w http.ResponseWriter, r *http.Request) {
 
 func New(opts ... ServerOption) Server {
 	config := &ServerConfig{
-		Port:8080,
+		Port:PORT_LISTEN,
 	}
 	for _, opt := range opts {
 		opt(config)
