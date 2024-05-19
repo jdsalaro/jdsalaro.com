@@ -15,7 +15,6 @@ import (
  */
 
 //todo: use env variables
-//todo: add quick remarks about building and running
 
 func main() {
 	var s server.Server
