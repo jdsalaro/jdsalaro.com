@@ -8,7 +8,7 @@ RUN go get ./...
 RUN go build -o main main.go
 
 # STAGE: FINAL
-FROM alpine:latest
+FROM alpine:latest as final
 RUN apk add --no-cache bash
 COPY --from=builder /go/src/app/main main
 

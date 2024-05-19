@@ -20,18 +20,25 @@ type Server struct {
 
 type ServerOption func(c *ServerConfig)
 
+const (
+	EXPECTED_PARAMS = 2
+)
+
 func DefaultHandler(w http.ResponseWriter, r *http.Request) {
 	params := r.URL.Query()
 	inLove := false
 
-	if len(params) == 2 {
-		timmy := params.Get("timmy")
-		tn, _ := strconv.Atoi(timmy)
-		log.Printf("TIMMY PETALS: %d", tn)
-		sarah := params.Get("sarah")
-		sn, _ := strconv.Atoi(sarah)
-		log.Printf("SARAH PETALS: %d", sn)
-		if (tn+sn)%2 != 0 {
+	if len(params) == EXPECTED_PARAMS {
+
+		pn := []int{}
+
+		for k, v := range params {
+			n, _ := strconv.Atoi(v[0])
+			pn = append(pn,n )
+			log.Printf("PETALS: %s WITH %d", k, n)
+		}
+
+		if (pn[0]+pn[1])%2 != 0 {
 			inLove = true
 		}
 	}
